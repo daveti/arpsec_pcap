@@ -1,0 +1,24 @@
+arpsecd.o: arpsecd.c /usr/local/gprolog-1.4.2/include/gprolog.h \
+ AsControl.h AsDefs.h AsLogic.h AsLog.h AsTMeasure.h AsTpmDB.h
+AsLog.o: AsLog.c AsLog.h
+AsLogic.o: AsLogic.c AsLogic.h AsDefs.h AsLog.h
+AsTMeasure.o: AsTMeasure.c AsDefs.h AsLog.h AsKrnRelay.h AsNetlink.h \
+ AsTMeasure.h AsTpmDB.h AT.h tpmw.h
+AsKrnRelay.o: AsKrnRelay.c AsKrnRelay.h AsDefs.h AsLog.h AsControl.h
+AsNetlink.o: AsNetlink.c AsNetlink.h AsKrnRelay.h AsDefs.h AsControl.h \
+ AsLog.h
+AsTpmDB.o: AsTpmDB.c AsTpmDB.h AsLog.h AsKrnRelay.h AsDefs.h
+AsWhiteList.o: AsWhiteList.c AsWhiteList.h AsLog.h AsKrnRelay.h AsDefs.h
+AT.o: AT.c AT.h
+tpmw.o: tpmw.c tpmw.h AT.h
+timer_queue.o: timer_queue.c timer_queue.h timer_thread.h AsKrnRelay.h \
+ AsDefs.h
+timer_thread.o: timer_thread.c AsLog.h timer_queue.h timer_thread.h
+AsPcap.o: AsPcap.c AsPcap.h AsLog.h
+AsKrnProc.o: AsKrnProc.c AsLog.h AsKrnProc.h
+AsNet.o: AsNet.c AsTime.h AsNet.h
+AsNeighbor.o: AsNeighbor.c AsNeighbor.h
+AsControl.o: AsControl.c AsControl.h AsDefs.h AsLogic.h AsKrnRelay.h \
+ AsLog.h AsTMeasure.h AsTpmDB.h AsNetlink.h AsWhiteList.h tpmw.h AT.h \
+ timer_queue.h timer_thread.h AsKrnProc.h AsPcap.h AsNet.h AsNeighbor.h \
+ AsTime.h
