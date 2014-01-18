@@ -16,7 +16,7 @@
 // daveti: add name space for 
 
 #define MODULE_NAME    "arpsec_mod"
-#define TARP_VERSION "0.01"
+#define ARPSEC_VERSION "0.01"
 MODULE_AUTHOR("Dave Tian");
 MODULE_DESCRIPTION("ARPSEC PCAP KERNEL MOD");
 MODULE_LICENSE("GPL");
@@ -50,7 +50,7 @@ void enable_tarp(void)
 
    printk(KERN_INFO "[arpsec_mod] enabled\n");
    printk(KERN_INFO "[arpsec_mod] kernel can now receive ARP entries "\
-                          "only through TARP daemon\n");
+                          "only through ARPSEC daemon\n");
 }
 
 void disable_tarp(void)
