@@ -278,10 +278,14 @@ int ascAddNeighbor(struct libnet_arp_hdr *arp, u_int32_t ip, char *iface)
     return -1;
   }
 
+/*
+daveti: this logic has been done by the caller - ascProcessArpRe...
+
   if (tpa != ip) {
     asLogMessage("ascAddNeighbor: Info - Reply not for me\n");
     return -1;
   }
+*/
 
   /* Add the binding */
   neigh_add(earp->arp_sha, spa, iface, NUD_REACHABLE);
